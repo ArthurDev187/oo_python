@@ -1,4 +1,4 @@
-class Restaurant():
+class Restaurant:
     name = ''
     category = ''
     active = False
