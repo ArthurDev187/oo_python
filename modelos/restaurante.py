@@ -1,23 +1,43 @@
+from modelos.avaliacao import Avaliacao
+#importando a classe avaliacao para ser utilizado dentro da classe restaurante.
 class Restaurante:
+    restaurantes = []
+    # classe que representa um restaurante como inicio de nome, categoria e ativo ou não.
     def __init__(self, nome, categoria):
-        lista_restaurantes = []
-        self.nome = nome
-        self.categoria = categoria
+        self._nome = nome
+        self._categoria = categoria
         self._ativo = False
-        lista_restaurantes.append(self)
-
-    
+        
+        
     def __str__(self):
-        return f"""Nome Restaurante: {self.nome}\nCategoria: {self.categoria}\n Ativo: {self.ativo}"""
-
-
-
-    def listar_restaurantes(cls):
-        print(f'{'Nome Restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Ativo'}')
-        for restaurante_temp in cls.lista_restaurantes:
-            print(f'{restaurante_temp.nome.ljust(25)} | {restaurante_temp.categoria.ljust(25)} | {restaurante_temp.ativo.ljust(25)}')
-
-
+        return f'{self._nome} | {self._categoria}'    
+        
+    
+    
+    
+        
     @property
-    def ativo(self):
-        return '☑' if self._ativo else '☒'
+    def nome(self):
+        return self._nome
+    
+    @nome.setter
+    def nome(self, novo_nome):
+        if novo_nome == None:
+            print('Não foi digitado nenhum nome.')
+            return
+        self._nome = novo_nome
+        print('Nome atualizado.')
+    
+    @property
+    def categoria(self):
+        return self._categoria
+    
+    @categoria.setter
+    def categoria(self, nova_categoria):
+        if nova_categoria == None:
+            print('Não foi digitada nenhuma categoria.')
+            return
+        self._categoria = nova_categoria
+        print('Categoria atualizada.')
+    
+    
