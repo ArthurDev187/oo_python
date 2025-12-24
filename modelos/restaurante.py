@@ -24,6 +24,14 @@ class Restaurante:
     """Essa é uma função que retorna uma string sempre que a instância for chamada e precisar mostrar alguma coisa."""
         
     
+    @classmethod
+    def listar_restaurantes(cls):
+        print(f'{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avaliacao'.ljust(25)} | {'Status'}')
+        for restaurante in cls.restaurantes:
+            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante.ativo}')
+            """Essa função printa uma lista formatada com todos os restaurantes na lista restaurantes da classe."""
+    
+    
     @property
     def nome(self):
         return self._nome
@@ -73,7 +81,7 @@ class Restaurante:
             self._avaliacao.append(avaliacao)
             """Essa função é para receber uma instância da avaliação, no caso cada cliente e sua avaliação."""
 
-
+    @property
     def media_avaliacoes(self):
         if not self._avaliacao:
             return '-'
@@ -84,9 +92,3 @@ class Restaurante:
     """Essa função faz o cálculo da média das avaliações."""
     
     
-    @classmethod
-    def listar_restaurantes(cls):
-        print(f'{'Nome do restaurante'.ljust(25)} | {'Categoria'.ljust(25)} | {'Avaliacao'.ljust(25)} | {'Status'}')
-        for restaurante in cls.restaurantes:
-            print(f'{restaurante._nome.ljust(25)} | {restaurante._categoria.ljust(25)} | {str(restaurante.media_avaliacoes).ljust(25)} | {restaurante.ativo}')
-            """Essa função printa uma lista formatada com todos os restaurantes na lista restaurantes da classe."""
