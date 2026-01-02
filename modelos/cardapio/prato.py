@@ -7,3 +7,6 @@ class Prato(ItemCardapio):
     
     def __str__(self):
         return self._nome
+    
+    def descrevendoClasse(self):
+        return 'prato'

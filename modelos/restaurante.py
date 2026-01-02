@@ -1,4 +1,5 @@
 from modelos.avaliacao import Avaliacao
+from modelos.cardapio.item_cardapio import ItemCardapio
 """Importando a classe Avaliacao."""
 
 
@@ -13,6 +14,8 @@ class Restaurante:
         self._categoria = categoria
         self._ativo = False
         self._avaliacao = []
+        self._cardapio_pratos = []
+        self._cardapio_bebidas = []
         Restaurante.restaurantes.append(self)
         """Método que inicia a instância já com seus atributos e solicitando os argumentos principais.
         Uma atenção especial aqui para a adição que está acontecendo da instância dentro da lista que pertence a classe, 
@@ -92,3 +95,12 @@ class Restaurante:
     """Essa função faz o cálculo da média das avaliações."""
     
     
+    def incluir_item_cardapio(self, item):
+        if isinstance(item, ItemCardapio):
+            descricao_item = item.descrevendoClasse()
+            if descricao_item == 'prato':
+                self._cardapio_pratos.append(item)
+                print('O item foi adicionado no cardápio de pratos.')
+            elif descricao_item == 'bebida':
+                self._cardapio_bebidas.append(item)
+                print('O item foi adicionado no cardapio de bebidas.')

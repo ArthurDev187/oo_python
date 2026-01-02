@@ -15,6 +15,9 @@ bebida_1 = Bebida('Suco de laranja', 5.0, 'Grande')
 bebida_2 = Bebida('Grarana antartica', 4.0, 'Media')
 
 
+
+
+
 def main():
     print(f'Prato 1: {prato_1}')
     print(f'Prato 2: {prato_2}')
@@ -22,7 +25,8 @@ def main():
     print(f'Bebida 1: {bebida_1}')
     print(f'Bebida : {bebida_2}')
     print('Ola mundo')
-    pass
+    restaurante_1.incluir_item_cardapio(prato_1)
+    restaurante_1.incluir_item_cardapio(bebida_1)
 
 if __name__ == '__main__':
     main()
