@@ -6,7 +6,7 @@ class Prato(ItemCardapio):
         self.descricao = descricao
     
     def __str__(self):
-        return self._nome
+        return f'{self._nome} - {self._preco}'
     
-    def descrevendoClasse(self):
+    def descricaoCardapio(self):
         return 'prato'

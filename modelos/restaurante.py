@@ -97,10 +97,21 @@ class Restaurante:
     
     def incluir_item_cardapio(self, item):
         if isinstance(item, ItemCardapio):
-            descricao_item = item.descrevendoClasse()
+            descricao_item = item.descricaoCardapio()
             if descricao_item == 'prato':
                 self._cardapio_pratos.append(item)
                 print('O item foi adicionado no cardápio de pratos.')
             elif descricao_item == 'bebida':
                 self._cardapio_bebidas.append(item)
                 print('O item foi adicionado no cardapio de bebidas.')
+                
+    
+    @property
+    def exibir_itens_cardapio(self):
+        print('╰☆☆ 𝒫𝓇𝒶𝓉𝑜𝓈 ☆☆╮')
+        for item in self._cardapio_pratos:
+            print(item)
+        print(f"\n{'='*40}\n")
+        print('╰☆☆ ℬ𝑒𝒷𝒾𝒹𝒶𝓈 ☆☆╮')
+        for item in self._cardapio_bebidas:
+            print(item)

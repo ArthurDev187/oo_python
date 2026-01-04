@@ -3,5 +3,5 @@ from modelos.cardapio.prato import Prato
 
 beb = Bebida('Vinho', 99, 'grande')
 
-descobrindo = beb.descrevendoClasse()
+descobrindo = beb.descricaoCardapio()
 print(descobrindo)

@@ -27,6 +27,10 @@ def main():
     print('Ola mundo')
     restaurante_1.incluir_item_cardapio(prato_1)
     restaurante_1.incluir_item_cardapio(bebida_1)
+    restaurante_1.incluir_item_cardapio(prato_2)
+    restaurante_1.incluir_item_cardapio(bebida_2)
+    print()
+    restaurante_1.exibir_itens_cardapio
 
 if __name__ == '__main__':
     main()
