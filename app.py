@@ -36,6 +36,6 @@ def main():
     prato_1.aplicar_desconto()
     restaurante_1.exibir_itens_cardapio
 
+
 if __name__ == '__main__':
     main()
-    
