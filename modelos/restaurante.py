@@ -115,3 +115,6 @@ class Restaurante:
         print('╰☆☆ ℬ𝑒𝒷𝒾𝒹𝒶𝓈 ☆☆╮')
         for item in self._cardapio_bebidas:
             print(item)
+            
+    
+    

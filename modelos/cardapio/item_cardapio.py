@@ -11,6 +11,9 @@ class ItemCardapio:
     def descricaoCardapio(self):
         pass 
 
+    
     @abstractmethod
-    def metodoAbs(self):
+    def aplicar_desconto(self):
         pass
+    
+    

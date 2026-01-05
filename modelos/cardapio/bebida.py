@@ -14,3 +14,7 @@ class Bebida(ItemCardapio):
     def descricaoCardapio(self):
         return 'bebida'
         
+        
+    def aplicar_desconto(self):
+        porcentagem_desconto = 15
+        self._preco -= (porcentagem_desconto / 100) * self._preco

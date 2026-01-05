@@ -1,7 +1,4 @@
-from modelos.cardapio.bebida import Bebida
-from modelos.cardapio.prato import Prato
-
-beb = Bebida('Vinho', 99, 'grande')
-
-descobrindo = beb.descricaoCardapio()
-print(descobrindo)
+preco = 25
+porcentagem_desconto = 2
+preco -= (porcentagem_desconto / 100) * preco
+print(preco)

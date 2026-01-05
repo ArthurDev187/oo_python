@@ -31,6 +31,10 @@ def main():
     restaurante_1.incluir_item_cardapio(bebida_2)
     print()
     restaurante_1.exibir_itens_cardapio
+    
+    print(f"\n{'*'*40}\n")
+    prato_1.aplicar_desconto()
+    restaurante_1.exibir_itens_cardapio
 
 if __name__ == '__main__':
     main()
